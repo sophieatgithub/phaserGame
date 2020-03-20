@@ -14,7 +14,7 @@ var config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    scene:[Scene1, Scene2]
+    scene:[BootGame, Menu]
 
     // config  properties https://photonstorm.github.io/phaser-ce/global.html#GameConfig
 }
