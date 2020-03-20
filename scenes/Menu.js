@@ -7,9 +7,10 @@ class Menu extends Phaser.Scene {
 
         //Adding Background
         this.add.image(0,0,"menu-background").setOrigin(0,0);
+        this.add.image(128,72,"player").setOrigin(0,0);
 
         //Adding Text
-        this.add.text(20, 20, "Menu", {font: "25px Arial", fill:"yellow"});
+        this.add.text(20, 20, "Menu", {font: "25px Arial", fill:"black"});
 
     }
 }

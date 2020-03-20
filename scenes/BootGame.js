@@ -6,6 +6,9 @@ class BootGame extends Phaser.Scene {
     preload() {
         //background images
         this.load.image("menu-background" , "../assets/backgrounds/sizings.png");
+
+        //Character images
+        this.load.image("player" , "../assets/player/player-forward.png");
         }
 
     create() {
