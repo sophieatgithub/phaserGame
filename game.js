@@ -14,6 +14,13 @@ var config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
     scene:[BootGame, Menu]
 
     // config  properties https://photonstorm.github.io/phaser-ce/global.html#GameConfig

@@ -8,8 +8,9 @@ class BootGame extends Phaser.Scene {
         this.load.image("menu-background" , "../assets/backgrounds/sizings.png");
 
         //Character images
-        this.load.image("player" , "../assets/player/player-forward.png");
-        }
+        this.load.spritesheet("player", "../assets/player/player-spritesheet.png",
+        { frameWidth: 16, frameHeight: 16 });
+    }
 
     create() {
         this.add.text(20, 20, "Loading game...");
@@ -18,4 +19,4 @@ class BootGame extends Phaser.Scene {
 ////////Scene change//
         this.scene.start("Menu");
     }
-}
+   }
