@@ -7,6 +7,11 @@ class BootGame extends Phaser.Scene {
         //background images
         this.load.image("menu-background" , "../assets/backgrounds/sizings.png");
 
+        //lift images
+        this.load.image("lift-backdrop" , "../assets/background-animations/lift-backdrop.png");
+        this.load.image("liftdoor-left" , "../assets/background-animations/liftdoor-left.png");
+        this.load.image("liftdoor-right" , "../assets/background-animations/liftdoor-right.png");
+
         //Platforms
         this.load.image("apartment-platform" , "../assets/backgrounds/apartment-platform.png");
         this.load.image("pavement-platform" , "../assets/backgrounds/apartment-platform.png");

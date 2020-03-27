@@ -5,6 +5,7 @@ class Player extends Phaser.GameObjects.Sprite{
         this.x = x;
         this.y = y;
         this.platforms = platforms;
+
         this.currentPlayer = this.addPlayer();  
 
 /////Player collision rules
@@ -15,6 +16,7 @@ class Player extends Phaser.GameObjects.Sprite{
         }
 
         addPlayer() {
+            playerData.x = this.x;
             return this.scene.physics.add.sprite(this.x, this.y, "player-spritesheet").play("forward");
         }
 
@@ -23,13 +25,16 @@ class Player extends Phaser.GameObjects.Sprite{
         
             if (cursors.left.isDown)
             {
-                this.currentPlayer.setVelocityX(-100);   
+                this.currentPlayer.x -= 2;   
+                playerData.x = this.currentPlayer.x;
                 this.currentPlayer.anims.play('left', true);
             }
             else if (cursors.right.isDown)
             {
-                this.currentPlayer.setVelocityX(100);        
+                this.currentPlayer.x += 2;       
+                playerData.x = this.currentPlayer.x; 
                 this.currentPlayer.anims.play('right', true);
+
             }
             else
             {
